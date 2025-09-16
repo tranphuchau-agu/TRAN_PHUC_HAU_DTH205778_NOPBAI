@@ -1,5 +1,13 @@
-t = int(input("Nhap so giay: "))
-h = t // 3600
-m = (t % 3600) // 60
-s = t % 60
-print(f"{h}:{m}:{s}")
+# Đếm số ngày trong tháng
+print("Chương trình đếm số ngày trong tháng\n")
+month = int(input("Nhập vào tháng (1-12): "))
+if month in (1, 3, 5, 7, 8, 10, 12):
+    print(f"Tháng {month} có 31 ngày")
+elif month in (4, 6, 9, 11):
+    print(f"Tháng {month} có 30 ngày")
+elif month == 2:
+    year = int(input("Nhập vào năm: "))
+    if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+        print(f"Tháng {month} của năm {year} có 29 ngày")
+    else:
+        print(f"Tháng {month} của năm {year} có 28 ngày")

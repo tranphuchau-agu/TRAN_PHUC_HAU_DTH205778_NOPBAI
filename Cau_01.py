@@ -1,10 +1,7 @@
-import math
-
-try:
-    r = float(input('Nhap ban kinh: '))
-    cv = 2 * math.pi * r
-    dt = r**2
-    print(f'Chu vi hinh tron: {cv}')
-    print(f'Dien tich hinh tron: {dt}')
-except:
-    print('Ban kinh khong hop le!')
+# Kiểm tra năm nhuần
+print("Chương trình kiểm tra năm nhuần\n")
+year = int(input("Nhập vào một năm: "))
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print(f"Năm {year} là năm nhuần")
+else:
+    print(f"Năm {year} không phải là năm nhuần")
